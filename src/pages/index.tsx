@@ -9,7 +9,7 @@ import BannerCard from 'src/components/home/BannerCard/BannerCard'
 
 export type Props = PageProps<HomePageQueryQuery>
 
-function Page(props: Props) {
+const Page = (props: Props) => {
   const {
     data: { site },
     location: { pathname, host },
@@ -53,19 +53,34 @@ function Page(props: Props) {
         Sections: Components imported from '../components/sections' only.
         Do not import or render components from any other folder in here.
       */}
-      <h1>{title}</h1>
-      <img
-        className="pp-main-banner"
-        src="https://sesnick.vtexassets.com/arquivos/banner-desk.png"
-        alt="Encontre o Melhor Parceiro"
-      />
-      <h2>Navegue por Categorias</h2>
-      <ul>
-        <BannerCard />
-        <CategoryBox title="oi" />
-        <CategoryBox title="tchau" />
-        <CategoryBox title="Olar" />
-      </ul>
+      <section className="flex justify-center flex-col items-center">
+        <img
+          className="pp-main-banner"
+          src="https://sesnick.vtexassets.com/arquivos/banner-desk.png"
+          alt="Encontre o Melhor Parceiro"
+        />
+        <div className="banner-card-container flex flex-row">
+          <BannerCard
+            imageURL="https://sesnick.vteximg.com.br/arquivos/icon-settings.png"
+            title="Eu quero construir minha loja"
+            smallText="Agências"
+          />
+          <BannerCard
+            imageURL="https://sesnick.vteximg.com.br/arquivos/icon-stock.png"
+            title="Eu quero construir minha loja"
+            smallText="Agências"
+          />
+        </div>
+      </section>
+      <section>
+        <h2>Navegue por Categorias</h2>
+
+        <ul>
+          <CategoryBox title="oi" imageName="test" />
+          <CategoryBox title="tchau" imageName="test" />
+          <CategoryBox title="Olar" imageName="test" />
+        </ul>
+      </section>
     </>
   )
 }

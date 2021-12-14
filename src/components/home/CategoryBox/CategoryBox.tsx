@@ -6,7 +6,9 @@ interface categoryBox {
   imageName: string
 }
 
-const CategoryBox: categoryBox = ({ title = 'Título', imageName = 'test' }) => {
+const CategoryBox = (props: categoryBox) => {
+  const { title, imageName } = props
+
   return (
     <>
       <li>

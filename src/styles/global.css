@@ -22,3 +22,33 @@ h1{
 .pp-main-banner{
   width: 100%;
 }
+
+.banner-card{
+  padding: 30px 50px;
+  background: #fff;
+  margin-top: -20px;
+  border-radius: 10px;
+  max-width: 355px;
+  box-shadow: 10px 10px 50px rgb(0 0 0 / 8%);
+  color: #4a596b;
+  margin: -40px 10px 0px;
+  transition: 0.3s linear;
+}
+
+.banner-card:hover{
+  margin-top: -60px
+}
+
+.banner-card-image {
+  max-width: 30px;
+  margin: 0px 15px 0px 0px;
+}
+
+.banner-card-small{
+  font-size: 13px;
+}
+
+.banner-card-title{
+  font-size: 24px;
+  line-height: 28px;
+}
