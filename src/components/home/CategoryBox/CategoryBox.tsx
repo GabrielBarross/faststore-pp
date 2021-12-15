@@ -1,21 +1,26 @@
 import React from 'react'
+import { IconContext } from 'react-icons'
+import { HiOutlineTag } from 'react-icons/hi'
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 interface categoryBox {
   title: string
-  imageName: string
 }
 
 const CategoryBox = (props: categoryBox) => {
-  const { title, imageName } = props
+  const { title } = props
 
   return (
     <>
-      <li>
-        <a href="oi">
-          <img src={`${imageName}`} alt={`Categoria ${title}`} />
-          <p>{title}</p>
-        </a>
+      <li className="category-card">
+        <div className="category-icon-card">
+          <IconContext.Provider value={{ color: '#4a596b', size: '50px' }}>
+            <a href="oi">
+              <HiOutlineTag />
+            </a>
+          </IconContext.Provider>
+        </div>
+        <p className="category-box-title">{title}</p>
       </li>
     </>
   )

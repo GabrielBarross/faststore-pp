@@ -6,6 +6,7 @@ import type { PageProps } from 'gatsby'
 import type { HomePageQueryQuery } from '@generated/graphql'
 import CategoryBox from 'src/components/home/CategoryBox/CategoryBox'
 import BannerCard from 'src/components/home/BannerCard/BannerCard'
+import { Form } from '@faststore/ui'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -67,19 +68,26 @@ const Page = (props: Props) => {
           />
           <BannerCard
             imageURL="https://sesnick.vteximg.com.br/arquivos/icon-stock.png"
-            title="Eu quero construir minha loja"
-            smallText="Agências"
+            title="Eu quero evoluir minha loja"
+            smallText="Serviços e Ferramentas"
           />
         </div>
       </section>
-      <section>
-        <h2>Navegue por Categorias</h2>
-
-        <ul>
-          <CategoryBox title="oi" imageName="test" />
-          <CategoryBox title="tchau" imageName="test" />
-          <CategoryBox title="Olar" imageName="test" />
+      <section className="section-home">
+        <h4 className="section-title">Navegue por Categorias</h4>
+        <ul className="category-box-list">
+          <CategoryBox title="Marketing" />
+          <CategoryBox title="Implementação e Vendas" />
+          <CategoryBox title="Gestão de Eccommerce" />
+          <CategoryBox title="Serviços Financeiros" />
+          <CategoryBox title="Operações de Fullfilment" />
+          <CategoryBox title="Marketplaces" />
         </ul>
+      </section>
+      <section className="newsletter-section">
+        <Form>
+          <h1>Cadastre-se na nossa Newsletter</h1>
+        </Form>
       </section>
     </>
   )

@@ -52,3 +52,55 @@ h1{
   font-size: 24px;
   line-height: 28px;
 }
+
+.section-title{
+  color: #142032;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.section-home{
+  margin-top: 50px;
+}
+
+.category-svg-box{
+  background: #000;
+}
+
+.category-icon-card{
+  background-color: #eeeeee;
+  border-radius: 100px;
+  padding: 15px;
+}
+
+.category-box-list{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.category-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-card{
+  margin: 20px 20px;
+  max-width: 150px;
+}
+
+.category-icon-card:hover{
+  background-color: #f71963;
+}
+
+.category-icon-card:hover svg {
+  color: #fff !important
+}
+
+.category-box-title{
+  margin-top: 10px;
+  text-align: center
+}
