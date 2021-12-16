@@ -30,8 +30,8 @@ const NewsletterForm = () => {
         <Label>Preencha seu E-mail</Label>
         <Input placeholder="Input" onChange={(e) => handleInput(e)} />
         <Checkbox checked={newsAccept} onClick={(e) => handleCheckbox(e)} />
-        {newsEmail}
         <Button onClick={(e) => handleSubmit(e)}> Enviar </Button>
+        {newsEmail}
       </Form>
     </section>
   )
