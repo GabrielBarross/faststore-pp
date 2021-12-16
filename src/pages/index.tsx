@@ -4,9 +4,11 @@ import { GatsbySeo, JsonLd } from 'gatsby-plugin-next-seo'
 import React from 'react'
 import type { PageProps } from 'gatsby'
 import type { HomePageQueryQuery } from '@generated/graphql'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 import CategoryBox from 'src/components/home/CategoryBox/CategoryBox'
 import BannerCard from 'src/components/home/BannerCard/BannerCard'
-import { Form } from '@faststore/ui'
+import NewsletterForm from 'src/components/home/NewsletterForm/NewsletterForm'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -20,6 +22,26 @@ const Page = (props: Props) => {
 
   const title = site?.siteMetadata?.title ?? ''
   const siteUrl = `https://${host}${pathname}`
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  }
 
   return (
     <>
@@ -84,11 +106,21 @@ const Page = (props: Props) => {
           <CategoryBox title="Marketplaces" />
         </ul>
       </section>
-      <section className="newsletter-section">
-        <Form>
-          <h1>Cadastre-se na nossa Newsletter</h1>
-        </Form>
+      <section>
+        <Carousel responsive={responsive}>
+          <p>oi1</p>
+          <p>oi2</p>
+          <p>oi3</p>
+          <p>oi4</p>
+          <p>oi5</p>
+          <p>oi6</p>
+          <p>oi7</p>
+          <p>oi8</p>
+          <p>oi9</p>
+          <p>oi10</p>
+        </Carousel>
       </section>
+      <NewsletterForm />
     </>
   )
 }
