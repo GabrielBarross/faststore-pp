@@ -59,7 +59,7 @@ h1{
   text-align: center;
 }
 
-.section-home{
+.fh-section{
   margin-top: 50px;
 }
 
@@ -115,4 +115,57 @@ h1{
 .newsletter-title{
   font-size: 40px;
   text-align: center;
+}
+
+.h-section {
+  padding: 50px 100px;
+}
+
+.b-gray{
+  background: #f8f7fc;
+}
+
+.shelf-title{
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+  margin-bottom: 48px;
+}
+
+.partner-card{
+  background: #fff;
+  height: 302px;
+  padding: 30px;
+  margin: 10px;
+}
+
+.partner-card-header{
+  height: 50px;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.partner-card-body{
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.w-30{
+  width: 30%;
+}
+
+.highlight-title{
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 10px;
+  margin-top: 24px;
+  color: #142032;
+  font-weight: 400;
+}
+
+.highlight-card{
+  margin: 0px 20px;
+}
+
+.x-scroll{
+  overflow-x: scroll;
 }

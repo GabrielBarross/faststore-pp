@@ -10,15 +10,6 @@ const NewsletterForm = () => {
     setNewsEmail(e.target.value)
   }
 
-  function handleCheckbox(e: any) {
-    e.preventDefault()
-    if (newsAccept === false) {
-      return setNewsAccept(true)
-    }
-
-    return setNewsAccept(false)
-  }
-
   function handleSubmit(e: any) {
     e.preventDefault()
   }
@@ -29,7 +20,10 @@ const NewsletterForm = () => {
         <h4 className="newsletter-title">Cadastre-se na nossa Newsletter</h4>
         <Label>Preencha seu E-mail</Label>
         <Input placeholder="Input" onChange={(e) => handleInput(e)} />
-        <Checkbox checked={newsAccept} onClick={(e) => handleCheckbox(e)} />
+        <Checkbox
+          checked={newsAccept}
+          onClick={() => setNewsAccept(!newsAccept)}
+        />
         <Button onClick={(e) => handleSubmit(e)}> Enviar </Button>
         {newsEmail}
       </Form>
