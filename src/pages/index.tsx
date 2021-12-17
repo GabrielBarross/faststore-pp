@@ -102,12 +102,12 @@ const Page = (props: Props) => {
       <section className="fh-section h-section x-scroll">
         <h3 className="section-title">Navegue por Categorias</h3>
         <ul className="category-box-list">
-          <CategoryBox title="Marketing" />
-          <CategoryBox title="Implementação e Vendas" />
-          <CategoryBox title="Gestão de Eccommerce" />
-          <CategoryBox title="Serviços Financeiros" />
-          <CategoryBox title="Operações de Fullfilment" />
-          <CategoryBox title="Marketplaces" />
+          <CategoryBox title="Marketing" url="/" />
+          <CategoryBox title="Implementação e Vendas" url="/" />
+          <CategoryBox title="Gestão de Eccommerce" url="/" />
+          <CategoryBox title="Serviços Financeiros" url="/" />
+          <CategoryBox title="Operações de Fullfilment" url="/" />
+          <CategoryBox title="Marketplaces" url="/" />
         </ul>
       </section>
       <section className="b-gray h-section">
@@ -117,6 +117,7 @@ const Page = (props: Props) => {
             return (
               <PartnerCard
                 key={index}
+                url="/"
                 partnerName="Default Prop Name"
                 partnerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
               />
@@ -158,6 +159,7 @@ const Page = (props: Props) => {
             return (
               <PartnerCard
                 key={index}
+                url="/"
                 partnerName="Default Prop Name"
                 partnerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
               />
