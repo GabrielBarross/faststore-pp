@@ -9,6 +9,8 @@ import 'react-multi-carousel/lib/styles.css'
 import CategoryBox from 'src/components/home/CategoryBox/CategoryBox'
 import BannerCard from 'src/components/home/BannerCard/BannerCard'
 import NewsletterForm from 'src/components/home/NewsletterForm/NewsletterForm'
+import PartnerCard from 'src/components/home/PartnerCard/PartnerCard'
+import HighlightCard from 'src/components/home/HighlightCard/HighlightCard'
 
 export type Props = PageProps<HomePageQueryQuery>
 
@@ -31,17 +33,19 @@ const Page = (props: Props) => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 5,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
     },
   }
+
+  const sampleArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
   return (
     <>
@@ -95,8 +99,8 @@ const Page = (props: Props) => {
           />
         </div>
       </section>
-      <section className="section-home">
-        <h4 className="section-title">Navegue por Categorias</h4>
+      <section className="fh-section h-section x-scroll">
+        <h3 className="section-title">Navegue por Categorias</h3>
         <ul className="category-box-list">
           <CategoryBox title="Marketing" />
           <CategoryBox title="Implementação e Vendas" />
@@ -106,18 +110,59 @@ const Page = (props: Props) => {
           <CategoryBox title="Marketplaces" />
         </ul>
       </section>
-      <section>
+      <section className="b-gray h-section">
+        <h3 className="shelf-title">Parceiros Populares</h3>
         <Carousel responsive={responsive}>
-          <p>oi1</p>
-          <p>oi2</p>
-          <p>oi3</p>
-          <p>oi4</p>
-          <p>oi5</p>
-          <p>oi6</p>
-          <p>oi7</p>
-          <p>oi8</p>
-          <p>oi9</p>
-          <p>oi10</p>
+          {sampleArray.map((index: any) => {
+            return (
+              <PartnerCard
+                key={index}
+                partnerName="Default Prop Name"
+                partnerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+              />
+            )
+          })}
+        </Carousel>
+      </section>
+      <section className="flex flex-row h-section">
+        <HighlightCard
+          title="Grupo Soma acelera marketplace próprio em parceria com Conecta Lá e VTEX"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          url="/"
+          image="https://sesnick.vteximg.com.br/arquivos/sample-highlight.png"
+        />
+        <HighlightCard
+          title="Grupo Soma acelera marketplace próprio em parceria com Conecta Lá e VTEX"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          url="/"
+          image="https://sesnick.vteximg.com.br/arquivos/sample-highlight.png"
+        />
+        <HighlightCard
+          title="Grupo Soma acelera marketplace próprio em parceria com Conecta Lá e VTEX"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          url="/"
+          image="https://sesnick.vteximg.com.br/arquivos/sample-highlight.png"
+        />
+      </section>
+      <section className="flex flex-row h-section">
+        <img
+          src="https://partnernetwork.vtexassets.com/assets/vtex.file-manager-graphql/images/d3431e0f-8c57-4f17-9c77-5099765ae5ba___2c04000e3d9e3f34ca6164cb68fdf8f4.png"
+          alt=""
+          width="100%"
+        />
+      </section>
+      <section className="b-gray h-section">
+        <h3 className="shelf-title">Novos Parceiros</h3>
+        <Carousel responsive={responsive}>
+          {sampleArray.map((index: any) => {
+            return (
+              <PartnerCard
+                key={index}
+                partnerName="Default Prop Name"
+                partnerText="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
+              />
+            )
+          })}
         </Carousel>
       </section>
       <NewsletterForm />
